@@ -1,0 +1,120 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sección hero*/
+.hero-section {
+  background-image: url('/assets/img/hero.jpg');
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+}
+
+/* BOTONES */
+.btn-primary {
+    background-color: white;
+    color: #88B04B;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/*HEADER*/
+.main-header {
+  background-color: #88B04B;
+  color: white;
+  padding: 20px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-left: 20px;
+}
+
+.nav-links a {
+    color: #d3d3d3; /* Gris claro */
+    text-decoration: none;
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+    text-decoration: none;
+    color: #c0c0c0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img{
+  max-height: 50px;
+  height: 50px;
+  width: auto;
+  margin-right: 10px; /* Espacio entre el logo y el texto */
+  filter: invert(100%) brightness(0.5); 
+}
+
+.logo-text {
+    color: #d3d3d3; /* Gris claro */
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-decoration: none;
+}
+
+/*SERVICIOS*/
+.services-section {
+    padding: 50px 20px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 20px;
+}
+
+.service-card img {
+    width: 50px;
+    height: auto;
+}
+
+/*FOOTER*/
+
+.main-footer {
+  background-color: #88B04B;
+}
+
+.service-img{
+  max-height: 50px;
+  max-height: 50px;
+}
+
