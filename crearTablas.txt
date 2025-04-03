@@ -1,0 +1,52 @@
+CREATE TABLE IF NOT EXISTS contactos (
+    contacto_id INT(11) NOT NULL AUTO_INCREMENT,
+    nombre VARCHAR(100) COLLATE utf8mb4_spanish2_ci NOT NULL,
+    email VARCHAR(100) COLLATE utf8mb4_spanish2_ci NOT NULL,
+    empresa VARCHAR(50) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+    telefono INT(14) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+    mensaje VARCHAR(255) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+    fecha_registro TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (contacto_id),
+    INDEX (email)
+);
+
+CREATE TABLE dc_respuestas (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    contacto_id INT(11) NOT NULL,
+    p1A VARCHAR(255) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+    p1B VARCHAR(255) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+    p2A VARCHAR(255) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+    p2B VARCHAR(255) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+    p3A VARCHAR(255) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+    p3B VARCHAR(255) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+    p4A VARCHAR(255) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+    p4B VARCHAR(255) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+    p5A VARCHAR(255) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+    p5B VARCHAR(255) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+    p6A VARCHAR(255) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+    p6B VARCHAR(255) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+    p7A VARCHAR(255) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+    p7B VARCHAR(255) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+    fecha_respuesta TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id),
+    INDEX (contacto_id)
+);
+
+-- Tabla: resultados
+CREATE TABLE dc_resultados (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    contacto_id INT(11) NOT NULL,
+    clan INT(11) NOT NULL,
+    adhocracia INT(11) NOT NULL,
+    mercado  INT(11) NOT NULL,
+    jerarquia INT(11) NOT NULL,
+    aprendizaje_continuo INT(11) NOT NULL,
+    aprendizaje_en_equipo INT(11) NOT NULL,
+    direccion_estrategica INT(11) NOT NULL,
+    empoderamiento INT(11) NOT NULL,
+    investigacion_dialogo INT(11) NOT NULL,
+    sistema_integrado INT(11) NOT NULL,
+    fecha_analisis TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id),
+    INDEX (contacto_id)
+);

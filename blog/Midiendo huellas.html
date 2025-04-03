@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Me llamo Rubén</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="../img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Molino de la Navata, Galapagar, Madrid</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+34 679 068 143</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>ruben.jeronimo.fernandez@gmail.com</small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://twitter.com/rjeronimof" target="_blank"><i class="fab fa-twitter fw-normal"></i></a>
+                    <!--<a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>-->
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.linkedin.com/in/ruben-jeronimo-fernandez/" target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/rubenjeronimofernandez/" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
+                    <!--<a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>-->
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar & Carousel Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="../index.html" class="navbar-brand p-0">
+                <!--<h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Rubén Jerónimo Fernández</h1>-->
+                <h1 class="m-0"><img id="logo" src="../img/logoMBlanco.png">Rubén Jerónimo Fernández</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="../index.html" class="nav-item nav-link active">Home</a>
+                    <a href="../index.html#activando" class="nav-item nav-link">Activando</a>
+                    <a href="../index.html#servicios" class="nav-item nav-link">Servicios</a>
+                    <a href="../index.html#sobremi" class="nav-item nav-link">Sobre mi</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Herramientas</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="../canvas.html" class="dropdown-item">Canvas de aprendizaje</a>
+                            <a href="../innovacion.html" class="dropdown-item">Perfil de innovación individual</a>
+                            <a href="../equipo.html" class="dropdown-item">Test diagnósis de equipo</a>
+                            <a href="../testObjetivos.html" class="dropdown-item">Test de objetivos</a>
+                        </div>
+                    </div>
+                    <a href="../index.html#blog" class="nav-item nav-link">Blog</a>
+                    <a href="../index.html#contacto" class="nav-item nav-link">Contacto</a>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+          <div class="row py-5">
+            <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+              <h1 class="display-4 text-white animated zoomIn" id="tituloPost">Midiendo huellas en el agua</h1>
+              <category id="categoriaPost">Indicadores</category>
+              <author id="autorPost">Rubén Jerónimo</author>
+              <a href="../index.html" class="h5 text-white">Home</a>
+              <i class="far fa-circle text-white px-2"></i>
+              <a href="../blog.html" class="h5 text-white">Blog Grid</a>
+            </div>
+          </div>
+        </div>
+
+
+        
+    </div>
+    <!-- Navbar & Carousel End -->
+
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+
+ 
+
+
+
+
+
+    
+
+
+
+
+    <!-- Blog Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Blog list Start -->
+                <div class="col-lg-8">
+                    <div class="row g-5">
+                        <div class="col-md-12 wow slideInUp" data-wow-delay="0.1s">
+                            <div class="blog-item bg-light rounded overflow-hidden">
+                                <div class="blog-img position-relative overflow-hidden">
+
+
+                                    <a id="etiquetaPost" class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-3 py-2 px-3" href="#">Indicadores</a>
+                                </div>
+                                <div class="p-4">
+                                    <div class="d-flex mb-3">
+                                        <small id="smallAutor" class="me-3">Rubén Jerónimo<i class="far fa-user text-primary me-2"></i></small>
+                                        <small id="smallFecha" >6 junio, 2023<i class="far fa-calendar-alt text-primary me-2"></i></small>
+                                    </div>
+                                    <h3 id="subtituloPost" class="mb-3">Transformando las herramientas de evaluación</h3>
+                                    <h4>Evaluar lo invisible</h4>
+                                    <p id="descripcionPost">En nuestra necesidad humana de medir y comparar el progreso, a menudo nos enfrentamos a conceptos abstractos y la búsqueda de evidencias con las cuales identificarnos. <br>Cuando hablamos sobre aprendizaje en organizaciones nos encontramos en estos casos.<br>Es en este contexto que surge la generación de usos distintos a los concebidos inicialmente, desafiando nuestras formas tradicionales de medición y evaluación.</p><br>
+                                    <img id="imagenPost" src="blog/imagenes/midiendohuellas1.jpg" style="width: 400px; display: block; margin: 0 auto;"><br>
+
+                                    <p>Como cartógrafo, mi labor consistía en crear mapas precisos. Anteriormente, utilizaba coordenadas cartesianas sin ambigüedades, representando características físicas y límites con exactitud. Esta precisión nos ha permitido lograr avances tecnológicos, como aterrizajes automatizados de aviones, gestión eficiente de flotas de vehículos y la capacidad de ubicarnos con precisión a través de estaciones de tierra y dispositivos móviles.<br>Sin embargo, esta precisión está limitada a un espacio documentado que permanece inalterable y dentro de fronteras definidas. Esta situación contrasta dramáticamente con la realidad que vivimos, caracterizada por su volatilidad, incertidumbre, complejidad y ambigüedad (VUCA, por sus siglas en inglés).<br>Se trata de todos esos intangibles de límites difusos, no siempre contemplados desde el mismo punto de vista por los miembros del equipo.<br>No disponemos de un laboratorio donde podamos analizar y medir la realidad de manera controlada, ya que los eventos no se repiten en el tiempo con las mismas características.</p>
+                                    <p>Pareciera que nos despedimos del espíritu científico, pero tal vez haya una alternativa.<br></p>
+                                    <h4>Límites difusos</h4>
+                                    <p>Se dice que los seres humanos nos sentimos reconfortados con la idea de un dios, ya que nos resulta difícil asumir el concepto de infinito. Similarmente, cuando nos enfrentamos a los famosos KPIs (Indicadores Clave de Desempeño), a menudo nos cuesta dar sentido a las acciones que realizamos y su impacto directo en los resultados. Nos encontramos con gestores de todo tipo que presentan indicadores que poco tienen que ver con el núcleo de lo que se está estudiando. Estos indicadores suelen apuntar hacia situaciones pasadas que el gestor reconoce y con las cuales siente cierta comodidad, ya que parece que alguien tiene el control de la situación.</p>
+                                    <img src="imagenes/midiendohuellas2.jpg" style="width: 400px; display: block; margin: 0 auto;"><br>
+                                    <p>No obstante, en entornos cambiantes, debemos considerar que las cuestiones reconocibles en otros segmentos del pasado solo nos brindan sugerencias para el futuro, no una hoja de ruta exacta. Tanto el contexto como los agentes involucrados son diferentes, lo que implica que los procesos y los resultados también pueden variar.<br>Aquí es donde tomo la sugerencia de Stacey Barr y su enfoque basado en evidencias. Aunque sigue siendo difícil asignar indicadores a conceptos intangibles, al menos evitamos el uso de palabras vacías que carecen de impacto en nuestros objetivos, pero que se han vuelto populares. Las evidencias, por otro lado, se revelan como huellas en el camino, una descripción precisa de los hechos que nos permiten definir KPIs intangibles de calidad. En lugar de enfocarnos en qué queremos "medir", nos centramos en el impacto que deseamos lograr, lo cual tiene más sentido y es más fácil de identificar.</p>
+                                    <h4>Dibujar en el humo</h4>
+                                    <p>No podemos permitirnos evaluar únicamente los impactos positivos o los conocidos. Es mucho más interesante plantearnos preguntas sobre los impactos desconocidos y tratar de definir posibles escenarios para esos futuros impactos, estableciendo las actividades y procesos necesarios para abordarlos.<br>Podemos ir más allá y considerar esas huellas como puntos intermedios en un camino de aprendizaje que nos llevará a un mayor conocimiento de nuestra propuesta de valor. En <a href="OKR4L.html">OKR4L (Objetivos y Resultados Clave para el aprendizaje)</a>, los llamamos resultados clave, y han sido diseñados específicamente para evaluar el estado de éxito parcial en un proceso completo, permitiéndonos contrastar la condición teórica con la real y ajustar nuestra estrategia en consecuencia.</p>
+                                    <img src="imagenes/midiendohuellas3.jpg" style="width: 400px; display: block; margin: 0 auto;"><br>
+                                    <p>Finalmente, creo que es importante destacar una diferencia en el lenguaje que solemos utilizar. Como cartógrafo, se me enseñó a "medir", pero la medición implica un resultado frío y analítico, carente de profundidad. Sin embargo, <b>cuando cambiamos el verbo por "observar", todo cambia.</b> El resultado deja de ser un mero indicador de desempeño y se convierte en una línea de vida para el equipo.<br>Si llegamos a la conclusión de que no necesitamos tener el control absoluto de los acontecimientos, sino la información más precisa posible sobre ellos, el equipo deja de sentirse vigilado y comienza a sentirse empoderado. Aprender a observar en lugar de medir nos permite trascender la rigidez de los resultados fríos y analíticos. Al adoptar esta perspectiva, el equipo se libera de la presión constante y se enfoca en obtener la información más precisa de los acontecimientos. De esta manera, la observación se convierte en una herramienta vital que impulsa el crecimiento y el éxito del equipo.<br>Necesitamos un nuevo marco en la relación con los resultados y su evaluación, observando el entorno y el impacto, en lugar de medir sus huellas en el agua.</p>
+                                    <p></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                                        /*
+                                        var titulo="Midiendo huellas en el agua";
+                                        var categoria="Indicadores";
+                                        var autor="Rubén Jerónimo";
+                                        var fecha="6 Junio, 2023";
+                                        var subtitulo="Objetivos y resultados clave en el aprendizaje";
+                                        document.getElementById("tituloPost").innerHTML=titulo;
+                                        document.getElementById("autorPost").innerHTML=autor;
+                                        document.getElementById("categoriaPost").innerHTML=categoria;
+                                        document.getElementById("etiquetaPost").innerHTML=categoria;
+                                        document.getElementById("smallAutor").innerHTML=autor;
+                                        document.getElementById("smallFecha").innerHTML=fecha;
+                                        document.getElementById("subtituloPost").innerHTML=subtitulo;
+                                        */
+                                        
+                                  // Obtener los datos del servidor utilizando AJAX
+                                  var xhr = new XMLHttpRequest();
+                                  xhr.open("GET", "../getArchivos.php", true);
+
+                                  xhr.onreadystatechange = function() {
+                                    if (xhr.readyState === 4 && xhr.status === 200) {
+                                      var archivos = JSON.parse(xhr.responseText);
+                                      var categorias = [];
+
+                                      // Generar la lista de archivos en HTML
+                                      var archivoList = document.getElementById("archivoList");
+                                      var listadoCategorias = document.getElementById("listadoCategorias");
+
+                                      // Ultimos post
+                                      var postRecientes = document.getElementById("postRecientes");
+
+                                      // Obtener los 5 últimos posts publicados
+                                      var ultimosPosts = archivos
+                                        .filter(function(archivo) {
+                                          return (
+                                            archivo.nombre !== "plantillaPost.html" &&
+                                            archivo.tipo !== "carpeta" &&
+                                            archivo.nombre !== "imagenes"
+                                          );
+                                        })
+                                        .slice(-5);
+
+                                      // Generar la lista de los 5 últimos posts en HTML
+                                      ultimosPosts.forEach(function(post) {
+                                        var listItem = document.createElement("li");
+                                        listItem.innerHTML = `
+                                          <div class="d-flex rounded mb-3">
+                                            <img class="img-fluid" src=${post.imagen} style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                                            <a href="${post.ruta}" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">${post.titulo}</a>
+                                          </div>
+                                        `;
+                                        listItem.classList.add("col-md-4");
+                                        postRecientes.appendChild(listItem);
+                                      });
+
+                                      archivos.forEach(function(archivo) {
+                                        if (
+                                          archivo.nombre !== "plantillaPost.html" &&
+                                          archivo.tipo !== "carpeta" &&
+                                          archivo.nombre !== "imagenes"
+                                        ) {
+                                          
+
+                                          var categoria = archivo.categoria;
+                                          if (!categorias.includes(categoria)) {
+                                            categorias.push(categoria);
+                                            var li = document.createElement('li');
+                                            var a = document.createElement('a');
+                                            a.href = '#';
+                                            a.innerHTML = '<i class="bi bi-arrow-right me-2"></i>' + categoria;
+                                            a.className = "h5 fw-semi-bold py-1 px-3 mb-2";
+                                            li.appendChild(a);
+                                            listadoCategorias.appendChild(li);
+
+                                            // Agregar evento de clic a cada categoría
+                                            a.addEventListener('click', function() {
+                                              // Filtrar los archivos según la categoría seleccionada
+                                              var archivosFiltrados = archivos.filter(function(archivoFiltrado) {
+                                                return archivoFiltrado.categoria === categoria;
+                                              });
+
+                                              // Limpiar la lista de archivos
+                                              archivoList.innerHTML = '';
+
+                                              // Generar la lista de archivos filtrados en HTML
+                                              archivosFiltrados.forEach(function(archivoFiltrado) {
+                                                var listItemFiltrado = document.createElement("li");
+
+                                                listItemFiltrado.innerHTML = `
+                                                  <div class="col-md-5 wow slideInUp" data-wow-delay="0.1s">
+                                                    <div class="blog-item bg-light rounded overflow-hidden">
+                                                      <div class="blog-img position-relative overflow-hidden">
+                                                        <img class="img-fluid" src=${archivoFiltrado.imagen} alt="">
+                                                        <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">${archivoFiltrado.categoria}</a>
+                                                      </div>
+                                                      <div class="p-4">
+                                                        <div class="d-flex mb-3">
+                                                          <small class="me-3">
+                                                            <i class="far fa-user text-primary me-2"></i>${archivoFiltrado.autor}
+                                                          </small>
+                                                          <small>
+                                                            <i class="far fa-calendar-alt text-primary me-2"></i>${archivoFiltrado.fecha}
+                                                          </small>
+                                                        </div>
+                                                        <h4 class="mb-3">${archivoFiltrado.titulo}</h4>
+                                                        <p>${archivoFiltrado.descripcion}</p>
+                                                        <a class="text-uppercase" href="${archivoFiltrado.ruta}">Leer más<i class="bi bi-arrow-right"></i></a>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                `;
+                                                archivoList.appendChild(listItemFiltrado);
+                                              });
+                                            });
+                                          }
+                                        }
+                                      });
+                                    }
+                                  };
+
+                                  xhr.send();
+                                </script>
+                        
+                        
+                    </div>
+                </div>
+                <!-- Blog list End -->
+    
+                <!-- Sidebar Start -->
+                <div class="col-lg-4">
+                    <!-- Search Form Start -->
+                    <!--<div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                        <div class="input-group">
+                            <input type="text" class="form-control p-3" placeholder="Busca por palabra">
+                            <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>-->
+                    <!-- Search Form End -->
+    
+                    <!-- Category Start -->
+                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h3 class="mb-0">Categorías</h3>
+                            
+                        </div>
+                        <div class="link-animated d-flex flex-column justify-content-start">
+                            <ul id="listadoCategorias" style="list-style-type: none;"></ul>
+                            <!--<a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Web Design</a>
+                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Web Development</a>
+                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Web Development</a>
+                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Keyword Research</a>
+                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>Email Marketing</a>-->
+                        </div>
+                    </div>
+                    <!-- Category End -->
+    
+                    <!-- Recent Post Start -->
+                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h3 class="mb-0">Post recientes</h3>
+                        </div>
+                        <div class="link-animated d-flex flex-column justify-content-start">   
+                            <ul id="postRecientes"></ul>
+                        </div>
+                        
+                       
+                    </div>
+                    <!-- Recent Post End -->
+    
+                    
+    
+                    <!-- Tags Start -->
+                    <!--
+                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h3 class="mb-0">Tag Cloud</h3>
+                        </div>
+                        <div class="d-flex flex-wrap m-n1">
+                            <a href="" class="btn btn-light m-1">Design</a>
+                            <a href="" class="btn btn-light m-1">Development</a>
+                            <a href="" class="btn btn-light m-1">Marketing</a>
+                            <a href="" class="btn btn-light m-1">SEO</a>
+                            <a href="" class="btn btn-light m-1">Writing</a>
+                            <a href="" class="btn btn-light m-1">Consulting</a>
+                            <a href="" class="btn btn-light m-1">Design</a>
+                            <a href="" class="btn btn-light m-1">Development</a>
+                            <a href="" class="btn btn-light m-1">Marketing</a>
+                            <a href="" class="btn btn-light m-1">SEO</a>
+                            <a href="" class="btn btn-light m-1">Writing</a>
+                            <a href="" class="btn btn-light m-1">Consulting</a>
+                        </div>
+                    </div>
+                -->
+                    <!-- Tags End -->
+    
+                    <!-- Plain Text Start -->
+                    <div class="wow slideInUp" data-wow-delay="0.1s">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h3 class="mb-0">¿Quieres colaborar?</h3>
+                        </div>
+                        <div class="bg-light text-center" style="padding: 30px;">
+                            <p>Socializar el conocimiento es fundamental en el proceso de aprendizaje. Si quieres socializar tu conocimiento aquí ponte en contacto conmigo y hablamos.</p>
+                            <a href="index.html#contacto" class="btn btn-primary py-2 px-4">Contacta</a>
+                        </div>
+                    </div>
+                    <!-- Plain Text End -->
+                </div>
+                <!-- Sidebar End -->
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+
+    
+    
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                        <a href="index.html" class="navbar-brand">
+                            <h1 class="m-0 text-white"><img src="../img/logoMBlanco.png">Rubén Jerónimo</h1>
+                        </a>
+                        <p class="mt-3 mb-4">Si quieres que te envíe información de vez en cuando, deja tu dirección de email y me pondré en contacto contigo.</p>
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-white p-3" placeholder="Tu Email">
+                                <button class="btn btn-dark">Envía</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Mantente en contacto</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0"> Molino de la Navata 14, Galapagar, MADRID</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <p class="mb-0">ruben.jeronimo.fernandez@gmail.com</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0">+34 679 068 143</p>
+                            </div>
+                            <div class="d-flex mt-4">
+                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Ve a:</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="../index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                <a class="text-light mb-2" href="../index.html#activando"><i class="bi bi-arrow-right text-primary me-2"></i>Activando</a>
+                                <a class="text-light mb-2" href="../index.html#servicios"><i class="bi bi-arrow-right text-primary me-2"></i>Servicios</a>
+                                <a class="text-light mb-2" href="../index.html#sobremi"><i class="bi bi-arrow-right text-primary me-2"></i>Sobre mi</a>
+                                <a class="text-light mb-2" href="../index.html#blog"><i class="bi bi-arrow-right text-primary me-2"></i>Blog</a>
+                                <a class="text-light" href="../index.html#contacto"><i class="bi bi-arrow-right text-primary me-2"></i>Contacto</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Textos legales</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="privacidad.html"><i class="bi bi-arrow-right text-primary me-2"></i>Politica privacidad</a>
+                                <a class="text-light mb-2" href="cookies.html"><i class="bi bi-arrow-right text-primary me-2"></i>Cookies</a>
+                                <a class="text-light mb-2" href="compras.html"><i class="bi bi-arrow-right text-primary me-2"></i>Política de compras</a>
+                                <a class="text-light mb-2" href="terminos.html"><i class="bi bi-arrow-right text-primary me-2"></i>Terminos y condiciones</a>
+                                <a class="text-light mb-2" href="legal.html"><i class="bi bi-arrow-right text-primary me-2"></i>Aviso legal</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white" style="background: #061429;">
+        <div class="container text-center">
+            <div class="row justify-content-end">
+                <div class="col-lg-8 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Rubén Jerónimo Fernández</a>. Copyright ©2023 Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

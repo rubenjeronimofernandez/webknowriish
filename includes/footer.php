@@ -9,6 +9,6 @@
   </div>
 </footer>
 
-<script src="/assets/js/main.js"></script> <!-- Si necesitas JavaScript -->
+<script src="/knowriish/assets/js/main.js"></script> <!-- Si necesitas JavaScript -->
 </body>
 </html>

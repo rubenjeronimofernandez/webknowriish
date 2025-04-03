@@ -1,16 +1,49 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 /* Sección hero*/
-.hero-section {
-  background-image: url('/assets/img/hero.jpg');
+.hero {
+  background-image: url('../img/hero.jpg');
   background-size: cover;
-  color: white;
+  color: black;
   text-align: center;
   padding: 50px 20px;
+  height: 400px;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 90%,
+    50% 100%,
+    0 90%
+  );
+  filter: brightness(0.7); /* Reduce el brillo de la imagen */
+}
+
+.hero-content {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Sombra para mejor legibilidad */
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: -50px; /* Ajusta la posición vertical */
+    left: 0;
+    width: 100%;
+    height: 100px; /* Altura del círculo */
+    background-color: #f9f9f9; /* Color del fondo */
+    border-radius: 50%; /* Crea el efecto circular */
 }
 
 .hero-section h1 {
@@ -27,6 +60,28 @@ body {
     color: #88B04B;
     padding: 10px 20px;
     text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background-color: #ff69b4; /* Cambia el color de fondo a rosa */
+    color: white; /* Mantiene el texto blanco */
+    transform: scale(1.1); /* Agranda ligeramente el botón */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Agrega sombra para efecto de relieve */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px; /* Negative margins to offset padding in columns */
+}
+
+.col-md-6 {
+    width: 50%;
+    padding: 0 15px;
+    box-sizing: border-box; /* Add box-sizing to columns */
 }
 
 /*HEADER*/
@@ -41,11 +96,13 @@ body {
   justify-content: space-between;
   padding: 1rem;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
+  align-items: center;
 }
 
 .nav-links li {
@@ -65,9 +122,106 @@ body {
     color: #c0c0c0;
 }
 
+/* Estilo general del dropdown */
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+/* Botón del dropdown */
+.dropbtn {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.dropbtn:hover {
+    color: #c0c0c0; /* Gris más claro al hacer hover */
+}
+
+/* Contenedor del contenido desplegable (oculto por defecto) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Muestra el desplegable debajo del botón */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente oscuro */
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que la transición funcione correctamente */
+    transform-origin: top; /* Origen de la transformación */
+    animation: growDown 0.3s ease forwards; /* Transición de despliegue */
+}
+
+/* Animación para la transición */
+@keyframes growDown {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+/* Estilo de los enlaces dentro del dropdown */
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content a {
+    color: #fff; /* Texto blanco */
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+/* Cambia el color de fondo al hacer hover en los enlaces */
+.dropdown-content a:hover {
+    background-color:  rgba(255, 255, 255, 0.1);
+}
+
+/* Mostrar el contenido del dropdown al hacer hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Cambiar el color del botón al hacer hover */
+.dropdown:hover .dropbtn {
+    color: #007BFF; /* Azul como ejemplo */
+}
+
 .logo-container {
     display: flex;
     align-items: center;
+}
+
+.logo-link {
+    display: flex; /* Coloca el logo y el texto en línea */
+    align-items: center; /* Alinea verticalmente el logo y el texto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Usa el color del contenedor padre */
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.textocentro{
+  text-align: center;
+  display: block;
+  margin:auto;
+  padding: 20px;
 }
 
 .logo-img{
@@ -82,28 +236,42 @@ body {
     color: #d3d3d3; /* Gris claro */
     font-size: 1.5rem;
     text-decoration: none;
-    text-decoration: none;
+    font-weight: bold;
 }
 
 /*SERVICIOS*/
 .services-section {
     padding: 50px 20px;
+    display: flex;          /* Habilita flexbox */
+  justify-content: center;
 }
 
 .service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    max-width: 1200px;    /* Define un ancho máximo */
+    width: 100%; 
 }
 
 .service-card {
     background-color: #f9f9f9;
     text-align: center;
     padding: 20px;
+    position: relative;
+    width: 90%;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex; /* Habilita el modelo Flexbox */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    justify-content: center; /* Distribuye los elementos verticalmente */
+    align-items: center; 
+    max-height: 400px;
+    height: 400px;
 }
 
 .service-card img {
-    width: 50px;
+    width: 100%;
     height: auto;
 }
 
@@ -111,10 +279,686 @@ body {
 
 .main-footer {
   background-color: #88B04B;
+  padding: 20px;
+}
+
+/* Estilo para la lista en el footer */
+.main-footer ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el espacio interno por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+    display: flex; /* Opcional: muestra los elementos en línea si lo deseas */
+    gap: 15px; /* Espaciado entre los elementos de la lista */
+}
+
+.main-footer ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #d3d3d3; /* Color gris claro para el texto */
+    transition: color 0.3s ease; /* Suaviza el cambio de color al hacer hover */
+}
+
+.main-footer ul li a:hover {
+    color: #ff69b4; /* Cambia a rosa cuando se pasa el cursor */
 }
 
 .service-img{
-  max-height: 50px;
-  max-height: 50px;
+  width: auto;
+  height: 100%;
+  z-index: 1;
 }
 
+.service-text {
+  margin: 10px;
+  position: absolute; /* Posiciona el texto sobre la imagen */
+  width: 85%; /* El texto ocupa todo el ancho del contenedor */
+  height: auto;
+  padding: 10px; /* Espaciado interno para el texto */
+  color: white; /* Cambia el color del texto para que sea legible sobre la imagen */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar legibilidad */
+  z-index: 2; /* Coloca el texto encima de la imagen */
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.testimonials-section{
+  background-color: #FFD700;
+  clip-path: polygon(
+        0 0,           /* Esquina superior izquierda */
+        100% 0,        /* Esquina superior derecha */
+        100% 90%,      /* Borde derecho (80% de altura) */
+        50% 100%,      /* Centro inferior (vértice del triángulo) */
+        0 90%          /* Borde izquierdo (80% de altura) */
+    );
+  padding: 60px 0 100px;
+  position: relative;
+  min-height: auto;
+}
+
+.container-activando{
+  width: 90%;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  justify-content: flex-end;
+}
+
+.contenedor-activando{
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.activando-card {
+  background: #FFC107 ;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.activando-card:hover {
+  transform: translateY(-5px);
+}
+
+.activando-card h4 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.activando-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.testimonial {
+  max-width: 800px;
+  margin: 50px auto 0;
+  padding: 30px;
+  font-style: italic;
+  font-size: 1.2rem;
+  text-align: center;
+  background: #FFC107;
+  border-radius: 10px;
+  position: relative;
+}
+
+.testimonial::before {
+  content: '"';
+  font-size: 4rem;
+  color: rgba(0,0,0,0.1);
+  position: absolute;
+  top: -20px;
+  left: 10px;
+}
+
+#guia{
+  background-color: lightgrey;
+}
+
+.guiaFoto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+
+}
+
+.contenedor-guia {
+    flex: 1;
+    padding: 20px;
+    min-width: 0;
+}
+
+.imagenGuia {
+    width: 200px;
+    height: auto;
+    margin: 20px; 
+    max-width: 40%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.boton-descarga {
+    display: inline-block; /* Muestra el botón en línea */
+    padding: 12px 25px; /* Espacio alrededor del texto */
+    background-color: #4e73df; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado */
+    border-radius: 5px; /* Redondea los bordes */
+    cursor: pointer; /* Cambia el cursor a mano */
+    font-weight: 600;
+    margin-top: 20px;
+    border: none;
+    transition: background 0.3s;
+}
+
+.boton-descarga:hover {
+    background-color: #0056b3; /* Cambia el color al pasar el cursor */
+}
+
+/* Estilo del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input {
+    width: calc(100% - 20px);
+    padding: 8px;
+}
+
+.social-links{
+  text-decoration: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Organiza las preguntas en una columna */
+    gap: 20px; /* Espaciado entre preguntas */
+}
+
+.radio-group {
+    display: flex; /* Coloca el botón y la etiqueta en línea */
+    align-items: center; /* Alinea verticalmente el botón con el texto */
+    gap: 10px; /* Espaciado entre el botón y la etiqueta */
+}
+
+/* Ajusta el estilo del botón de radio */
+input[type="radio"] {
+    margin: 0; /* Elimina cualquier margen por defecto */
+    vertical-align: middle; /* Asegura que esté alineado con el texto */
+}
+
+/* Ajusta el estilo de la etiqueta */
+label {
+    font-size: 1rem;
+    color: #333; /* Color del texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la etiqueta */
+}
+
+.contact-form {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important: Include padding and border in the element's total width and height */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-image {
+  margin-bottom: 20px; /* Add some spacing between the image and the form */
+}
+
+.contact-image img {
+    width: 100%; /* Make the image responsive, taking full width of its container */
+    height: auto;  /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    max-height: 300px; /* Limit maximum height */
+    object-fit: contain; /* Ensure the image fills the container without distortion */
+    overflow: hidden;
+}
+
+.contact-info {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+
+/* Estilos para el botón del menú en móviles */
+.menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    /* Añadir para controlar la posición */
+    position: absolute;
+    top: 1rem; /* Ajusta la distancia desde la parte superior */
+    right: 1rem; /* Ajusta la distancia desde la derecha */
+    z-index: 2;
+}
+
+.blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.blog-post h1 {
+    font-size: 2.5rem;
+    color: #88B04B;
+    margin-bottom: 20px;
+}
+
+.blog-post h2 {
+    font-size: 1.8rem;
+    color: #555;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.blog-post p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.blog-post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+.blog-post a {
+    color: #88B04B;
+    text-decoration: none;
+    border-bottom: 1px solid #88B04B;
+    transition: all 0.3s ease;
+}
+
+.blog-post a:hover {
+    color: #6a8d39;
+    border-bottom-color: #6a8d39;
+}
+
+.blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+.card-image-container {
+    position: relative; /* Establece el contenedor como relativo */
+}
+
+.card-image-container img {
+    display: block; /* Asegura que la imagen sea un bloque */
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+}
+
+.card-category {
+    position: absolute; /* Posiciona la categoría absolutamente */
+    top: 10px; /* Ajusta la posición vertical */
+    left: 10px; /* Ajusta la posición horizontal */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    color: white; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 0.8em; /* Tamaño de la fuente */
+}
+
+.blog-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+            display: flex; /* Habilita Flexbox en la tarjeta */
+            flex-direction: column;
+        }
+
+.blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+.blog-card img {
+            width: 100%;
+            height: 200px; /* Adjust as needed */
+            object-fit: cover;
+        }
+
+.card-content {
+    display: flex; /* Habilita Flexbox en el contenido de la tarjeta */
+    flex-direction: column; /* Organiza los elementos en columna */
+    flex-grow: 1; /* Permite que el contenido crezca para ocupar el espacio restante */
+}
+
+.card-footer {
+    margin-top: auto; /* Empuja el pie de la tarjeta hacia la parte inferior */
+}
+
+.blog-card .card-content {
+            padding: 20px;
+        }
+
+.blog-card .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+.blog-card .card-excerpt {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+.blog-card .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+.blog-card .card-category {
+            background-color: #88B04B;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+.blog-card .read-more-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #88B04B;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+.read-more-btn {
+    width: 100px;
+}
+
+.datosPost {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; /* Opcional: alinea verticalmente los elementos */
+}
+
+.datosPost p {
+  margin-right: 10px; /* Espacio entre los elementos */
+}
+
+#blog {
+    padding: 60px 0; /* Ajusta el espaciado vertical */
+}
+
+#blog .section-title h1 {
+    font-size: 2.5rem; /* Tamaño del título */
+    margin-bottom: 20px;
+}
+
+#blog .section-title a {
+    background-color: #00B0FF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+#blog .blog-item {
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    margin: 10px;
+}
+
+#blog .blog-item .blog-img img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#blog .blog-item .p-4 {
+    padding: 25px;
+}
+
+#blog .blog-item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+#blog .blog-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#blog .blog-item a.text-uppercase {
+    background-color: #00B0FF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#blog .custom-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+#blog .blog-cards-container {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+#blog .blog-card-item {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+.boton-entradas {
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin-left: 0; /* Elimina el margen izquierdo */
+}
+
+.contenedor-boton-entradas {
+  display: flex; /* Utiliza flexbox para alinear el contenido */
+  justify-content: left; /* Alinea el contenido a la izquierda */
+}
+
+.blog-post img {
+  max-width: 100%; /* Make images responsive, not exceeding the container width */
+  height: auto;      /* Maintain aspect ratio */
+  max-height: 500px; /* Optional: Set a maximum height (adjust as needed) */
+  display: block;     /* Prevent extra space below the image */
+  margin: 20px auto;  /* Center the image horizontally and add vertical margin */
+  border-radius: 8px;  /* Add rounded corners for a modern look */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Add a subtle shadow */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .testimonials-section {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 95%,
+      50% 100%,
+      0 95%
+    );
+    padding: 40px 0 80px;
+  }
+  
+  .contenedor-activando {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .testimonial {
+    margin: 30px 20px 0;
+    padding: 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-section {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 97%,
+      50% 100%,
+      0 97%
+    );
+    padding: 30px 0 70px;
+  }
+  
+  .activando-card {
+    padding: 20px;
+  }
+  .guiaFoto {
+    flex-direction: column; /* Apila elementos en móviles */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .imagenGuia {
+    max-width: 100%; /* Ocupa todo el ancho en móviles */
+    margin-top: 20px;
+    order: -1; /* Opcional: coloca la imagen arriba si lo prefieres */
+  }
+  
+  .contenedor-guia {
+    width: 100%;
+  }
+  .navbar {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: flex-start; /* Alinea los elementos a la izquierda */
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block; /* Muestra el botón del menú */
+        align-self: flex-end; /* Alinea el botón a la derecha */
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: none; /* Oculta el menú por defecto */
+        flex-direction: column; /* Apila los enlaces verticalmente */
+        width: 100%; /* Ocupa todo el ancho */
+        text-align: center; /* Centra el texto */
+    }
+
+    .nav-links.active {
+        display: flex; /* Muestra el menú cuando está activo */
+    }
+
+    .nav-links li {
+        display: block; /* Asegura que los elementos de la lista se apilen */
+        margin: 0.5rem 0; /* Añade un poco de margen vertical */
+    }
+
+    .dropdown {
+        display: block; /* Asegura que el dropdown se apile */
+    }
+
+    .dropdown-content {
+        position: static; /* Posiciona el contenido desplegable estáticamente */
+        box-shadow: none; /* Elimina la sombra */
+        width: 100%; /* Ocupa todo el ancho */
+        display: none; /* Oculta el contenido por defecto */
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block; /* Muestra el contenido cuando el dropdown está activo */
+    }
+    .contact-image {
+        text-align: center; /* Center the image on smaller screens */
+    }
+
+    .contact-image img {
+        max-height: 200px; /* Further reduce the maximum height on smaller screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .guiaFoto {
+    padding: 25px;
+  }
+  
+  .imagenGuia {
+    max-width: 45%;
+  }
+}
